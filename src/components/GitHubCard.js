@@ -15,5 +15,4 @@ export default function GitHubCard({ name, imageURL, description, index }) {
             </Card.Body>
         </ Card >
 
-    );
-
+    )}
