@@ -30,3 +30,9 @@ exports[`renders a snapshot 1`] = `
   </header>
 </div>
 `;
+
+exports[`renders a snapshot 2`] = `
+<h2>
+  testing
+</h2>
+`;
