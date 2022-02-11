@@ -1,25 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import GitHubCard from './components/GitHubCard';
 
 function App() {
+  const users = [{
+    name: 'milcab23.js',
+    imageURL: 'https://avatar-endpoint.herokuapp.com/api/',
+  },
+  {
+    name: 'james.js',
+    imageURL: 'https://avatar-endpoint.herokuapp.com/api/',
+  },
+  {
+    name: 'joe.js',
+    imageURL: 'https://avatar-endpoint.herokuapp.com/api/',
+  },
+  {
+    name: 'mae.js',
+    imageURL: 'https://avatar-endpoint.herokuapp.com/api/',
+  }];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {users.map((user, i) => <GitHubCard key={i} {...user} index={i} />)}
     </div>
   );
+
 }
 
 export default App;
